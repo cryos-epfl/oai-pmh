@@ -38,4 +38,13 @@ Now you can test various ["verbs"](https://www.openarchives.org/OAI/openarchives
 
 ## Integrating your backend
 
+To serve records from your backend (database or file system) you need to implement interfaces from ```oai-pmh-interfaces ``` module. All the implementations need to be annotated with ```@Named``` from ```javax.inject```. 
+As a starting point you can have a look at ```demo-impl ``` module, which contatins implementation classes and serves records from the file sytem.
+
+### Core interfaces
+
+
+
+
+
 
