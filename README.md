@@ -42,7 +42,12 @@ To serve records from your backend (database or file system) you need to impleme
 As a starting point you can have a look at ```demo-impl ``` module, which contatins implementation classes and serves records from the file sytem.
 
 ### Core interfaces
-
+* ```RepositoryIdentity``` - provides information about the repository
+* ```OaiConfiguration``` - main "glue" class for custom implemetation and the service.
+* ```MetadataFormat``` - each metadata format available from a repository must have a corresponding implemetation of this interface.
+* ```Converter``` - converter for each supported metadata format.
+* ```RecordAccessService``` - a service to retrieve records.
+* ```Record``` - a wrapper for a record. Implementation of a record itself might contatain just a XML string or model Java object.
 
 
 
