@@ -1,6 +1,6 @@
 # OAI-PMH data provider generic implementation
 
-This is a "lightweight" Spring based implementation of [The Open Archives Initiative Protocol for Metadata Harvesting](https://www.openarchives.org/OAI/openarchivesprotocol.html). 
+This is a "lightweight" implementation of [The Open Archives Initiative Protocol for Metadata Harvesting](https://www.openarchives.org/OAI/openarchivesprotocol.html). This service is relying on [Spring Framework](http://projects.spring.io/spring-framework/) for Dependency Injection, the web application is running on embedded Tomcat via [Spring Boot](http://projects.spring.io/spring-boot/).
 
 ## What you’ll need
 
