@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LOG="../logs/oai-pmh.log"
+LOG="../oai-pmh.log"
 
 log=${1:-$LOG}
 
