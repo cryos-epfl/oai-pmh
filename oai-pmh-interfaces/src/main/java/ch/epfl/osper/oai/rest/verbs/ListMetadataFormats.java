@@ -45,7 +45,7 @@ public class ListMetadataFormats {
             formats.append(templateHelper.fillTemplate("metadataFormat.template", parameters)).append("\n");
         }
 
-        return templateHelper.fillTopTmplate(this.getClass().getName(), formats.toString(), "");
+        return templateHelper.fillTopTemplate(this.getClass().getName(), formats.toString(), "");
 
     }
 }

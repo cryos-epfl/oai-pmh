@@ -86,10 +86,14 @@ public class TemplateHelper {
         recordParameters.put("header", header);
         recordParameters.put("metadata", metadata);
 
-        return fillTemplate("record.template", recordParameters);
+        String templateName = "record.template";
+        if (record.isDeleted())
+        	templateName = "deletedRecord.template";
+
+        return fillTemplate(templateName, recordParameters);
     }
 
-    public String fillTopTmplate(String verb, String verbContent, String parameters) {
+    public String fillTopTemplate(String verb, String verbContent, String parameters) {
         Map<String, String> commonParameters = getCommonParameters();
         commonParameters.put("verb", verb);
         commonParameters.put("parameters", parameters);
