@@ -63,7 +63,7 @@ public class TemplateHelperTest {
     @Test
     public void testFormatDate() throws Exception {
         Date date = new Date(0);
-        assertThat(subject.formatDate(date), is("1970-01-01T01:00:00"));
+        assertThat(subject.formatDate(date), is("1970-01-01T00:00:00"));
     }
 
     @Test
@@ -80,7 +80,7 @@ public class TemplateHelperTest {
 
        assertThat(subject.formatHeader(recordMock), is("<header >\n" +
                "    <identifier>ID1</identifier>\n" +
-               "    <datestamp>1970-01-01T01:00:00</datestamp>\n" +
+               "    <datestamp>1970-01-01T00:00:00</datestamp>\n" +
                "</header>"));
     }
 
@@ -98,7 +98,7 @@ public class TemplateHelperTest {
 
         assertThat(subject.formatHeader(recordMock), is("<header status=\"deleted\">\n" +
                 "    <identifier>ID1</identifier>\n" +
-                "    <datestamp>1970-01-01T01:00:00</datestamp>\n" +
+                "    <datestamp>1970-01-01T00:00:00</datestamp>\n" +
                 "</header>"));
     }
 
