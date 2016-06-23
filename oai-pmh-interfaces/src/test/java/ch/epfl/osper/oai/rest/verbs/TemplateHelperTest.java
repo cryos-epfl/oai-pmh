@@ -1,5 +1,6 @@
 package ch.epfl.osper.oai.rest.verbs;
 
+import ch.epfl.osper.oai.interfaces.OaiSet;
 import ch.epfl.osper.oai.interfaces.Record;
 import ch.epfl.osper.oai.interfaces.RepositoryIdentity;
 import com.google.common.collect.Maps;
@@ -35,8 +36,12 @@ public class TemplateHelperTest {
     private Record recordMock;
 
     @Mock
+    private OaiSet setMock;
+
+    @Mock
     private RepositoryIdentity identityMock;
     private TemplateHelper subject;
+
 
 
     @Before
@@ -78,6 +83,10 @@ public class TemplateHelperTest {
                 "</header>");
         when(templateConfigurationMock.getProperty("header.template")).thenReturn("header.template");
 
+        assertThat(subject.formatHeader(recordMock), is("<header >\n" +
+                "    <identifier>ID1</identifier>\n" +
+                "    <datestamp>1970-01-01T00:00:00</datestamp>\n" +
+                "</header>"));
        assertThat(subject.formatHeader(recordMock), is("<header >\n" +
                "    <identifier>ID1</identifier>\n" +
                "    <datestamp>1970-01-01T00:00:00</datestamp>\n" +
